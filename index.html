@@ -1,0 +1,1893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./stylea.css">
+   
+    <title>EPUB Format Ebooks</title>
+
+<style>
+
+/* ebooks style */
+
+.list {
+    margin-top: 30px;
+    margin-left: 40px;
+  }
+  
+  .search {
+      margin-top: 50px;
+      margin-left: 50px;
+      margin-right: 50px;
+  }
+  
+  .page {
+      margin-bottom: 100px;
+  }
+  
+  
+  /* Style the search box */
+  #mySearch {
+    width: 100%;
+    font-size: 18px;
+    padding: 11px;
+    border: 1px solid #ddd;
+  }
+  
+  #myMenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #myMenu li {
+      margin-bottom: 20px;
+      display: inline-block;
+      margin-right: 30px;
+      /* background-color: #efefee; */
+      font-size: 16px;
+      width: 150px;
+      /* height: 200px; */
+      text-align: center;
+      
+      
+  }
+  
+  #myMenu li a {
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+    display: block
+    
+  }
+  
+  /* #myMenu li a:hover {
+    background-color: #eee;
+    font-weight: bold;
+  } */
+  
+  
+  .ephoto {
+    width: 150px;
+    height: 250px;
+   
+   
+  }
+  
+  .ephoto img{
+    width: 100%;
+    height: 200px;
+  
+  }
+  
+  .ephoto p{
+    margin-top: 10px;
+  }
+  
+  .ephoto p:hover {
+    background-color: #eee;
+    font-weight: bold;
+  
+  }
+  
+  #previous{
+    color: black;  
+    font-weight: normal;
+    font-size: 15px;
+  }
+  
+  h3.price{
+    font-size: 22px;
+    margin-top: 0px;
+    color: red;
+    font-weight: bold;
+    background-color: bisque;
+  }
+  
+  p.name {
+    display: none;
+  }
+  
+  .note {
+    margin-top: 10px;
+    margin-left: 50px;
+    font-style: italic;
+  }
+
+  /* ebooks style */
+  
+  @media screen and (max-width: 400px) {
+    .ephoto {
+      width: 180px;
+      height: 350px;
+      margin-left: 30%;
+    }
+
+    .ephoto img {
+      width: 180px;
+      height: 250px;
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    .ephoto {
+      margin-left: 15%;
+    }
+  }
+
+
+
+    
+
+</style>
+
+</head>
+<body>
+
+<!-- nav bar -->
+
+<div class="nav">
+  <div class="logo">
+          <h2><span class="log1">eBooks</span><span class="log2">4sale</span></h2>
+         
+  </div>
+  <div class="hamburger" onclick="myFunction()">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+
+  </div>
+
+
+  <div class="topnav" id="myTopnav">
+    <a href="https://ebooksf4rsale.com/">Home</a>
+
+    <!-- dropdpwn -->
+   
+    <div class="dropdown">
+      <button class="dropbtn">Ebooks 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="https://ebooksf4rsale.com/ebooks">PDF Format</a>
+        <a href="https://ebooksf4rsale.com/ebooks-epub" class="active">Epub Format</a>
+        <a href="https://ebooksf4rsale.com/ebooks-multigenre">Multi-Genre</a>
+        
+      </div>
+    </div> 
+ 
+    <!-- dropdown -->
+
+    <a href="https://ebooksf4rsale.com/promo" >Promo</a>
+    <a href="https://ebooksf4rsale.com/about" >About Us</a>
+    <a href="https://ebooksf4rsale.com/contact" >Contact Us</a>
+    <a href="https://ebooksf4rsale.com/faq" >FAQ</a>
+   
+  </div>
+  </div>
+
+
+  <div class="topnav2" id="myTopnav2">
+      <a href="https://ebooksf4rsale.com/">Home</a>
+
+       <!-- dropdpwn -->
+  
+    <div class="dropdown">
+      <button class="dropbtn">Ebooks 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="https://ebooksf4rsale.com/ebooks">PDF Format</a>
+        <a href="https://ebooksf4rsale.com/ebooks-epub" class="active">Epub Format</a>
+        <a href="https://ebooksf4rsale.com/ebooks-multigenre">Multi-Genre</a>
+       
+      </div>
+    </div> 
+
+    <!-- dropdown -->
+    
+      <a href="https://ebooksf4rsale.com/promo" >Promo</a>
+      <a href="https://ebooksf4rsale.com/about" >About Us</a>
+      <a href="https://ebooksf4rsale.com/contact" >Contact Us</a>
+      <a href="https://ebooksf4rsale.com/faq" >FAQ</a>
+    </div>
+
+
+
+<!--nav bar  -->
+
+ 
+
+
+
+
+<!-- start -->
+
+
+<div class="search">
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a name">
+</div>
+
+<div class="note">
+  <p>Note: Click image to view eBook's details.</p>
+</div>
+
+<div class="list">
+   
+<div class="page">
+  
+    <ul id="myMenu" class="nobullets">
+      
+      <!-- Page 1 to 20 -->
+      <li>
+        <a href="./de01.html">
+        <div class="ephoto">
+            <img src="./e01.jpg" alt="">
+            <p class="name">Dark Psychology and Manipulation by Steven Secret</p>
+            <h3 class="price"><span>&#36;</span>8.40 <s id="previous">&#36;13.99</s></h3>
+            
+        </div>
+        </a>
+      </li>
+
+      <li>
+        <a href="./de02.html">
+        <div class="ephoto">
+            <img src="./e02.jpg" alt="">
+            <p class="name">Ego is the Enemy by Ryan Holiday </p>
+            <h3 class="price"><span>&#36;</span>7.20 <s id="previous">&#36;11.99</s></h3>
+            
+        </div>
+        </a>
+      </li>
+
+      <li>
+        <a href="./de03.html">
+        <div class="ephoto">
+            <img src="./e03.jpg" alt="">
+            <p class="name">Happier At Home by Gretchen Rubin </p>
+            <h3 class="price"><span>&#36;</span>3 <s id="previous">&#36;4.99</s></h3>
+            
+        </div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="./de04.html">
+        <div class="ephoto">
+            <img src="./e04.jpg" alt="">
+            <p class="name">How to Win Friends and Influence People by Dale Carnegie </p>
+            <h3 class="price"><span>&#36;</span>1 <s id="previous">&#36;1.80</s></h3>
+            
+        </div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="./de05.html">
+        <div class="ephoto">
+            <img src="./e05.jpg" alt="">
+            <p class="name">It's Not You by Ramani Durvasula PhD </p>
+            <h3 class="price"><span>&#36;</span>1.20 <s id="previous">&#36;1.99</s></h3>
+            
+        </div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="./de06.html">
+        <div class="ephoto">
+            <img src="./e06.jpg" alt="">
+            <p class="name">Mastermind: How to Think Like Sherlock Holmes by Maria Konnikova </p>
+            <h3 class="price"><span>&#36;</span>8.40 <s id="previous">&#36;13.99</s></h3>
+            
+        </div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="./de07.html">
+        <div class="ephoto">
+            <img src="./e07.jpg" alt="">
+            <p class="name">Mastery by Robert Greene </p>
+            <h3 class="price"><span>&#36;</span>5.40 <s id="previous">&#36;8.99</s></h3>
+            
+        </div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="./de08.html">
+        <div class="ephoto">
+            <img src="./e08.jpg" alt="">
+            <p class="name">The 4-Hour Work Week  by Timothy Ferriss </p>
+            <h3 class="price"><span>&#36;</span>6 <s id="previous">&#36;9.99</s></h3>
+            
+        </div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="./de09.html">
+        <div class="ephoto">
+            <img src="./e09.jpg" alt="">
+            <p class="name">The 33 Strategies of War by Robert Greene</p>
+            <h3 class="price"><span>&#36;</span>10.20 <s id="previous">&#36;16.99</s></h3>
+            
+        </div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="./de10.html">
+        <div class="ephoto">
+            <img src="./e10.jpg" alt="">
+            <p class="name">The 48 Laws of Power by Robert Greene</p>
+            <h3 class="price"><span>&#36;</span>10.20 <s id="previous">&#36;16.99</s></h3>
+            
+        </div>
+        </a>
+      </li>
+
+
+      <!-- 11-20 -->
+
+      <li>
+        <a href="./de11.html">
+        <div class="ephoto">
+            <img src="./e11.jpg" alt="">
+            <p class="name">The 50th Law by 50 Cent and Robert Greene </p>
+            <h3 class="price"><span>&#36;</span>11.40 <s id="previous">&#36;18.99</s></h3>
+            
+        </div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="./de12.html">
+        <div class="ephoto">
+            <img src="./e12.jpg" alt="">
+            <p class="name">The Alchemist by Paulo Coelho</p>
+            <h3 class="price"><span>&#36;</span>9 <s id="previous">&#36;14.99</s></h3>
+            
+        </div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="./de13.html">
+        <div class="ephoto">
+            <img src="./e13.jpg" alt="">
+            <p class="name">The Art of Laziness by Library Mindset </p>
+            <h3 class="price"><span>&#36;</span>6 <s id="previous">&#36;9.99</s></h3>
+            
+        </div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="./de14.html">
+        <div class="ephoto">
+            <img src="./e14.jpg" alt="">
+            <p class="name">The Art of Seduction by Robert Greene </p>
+            <h3 class="price"><span>&#36;</span>10.20 <s id="previous">&#36;16.99</s></h3>
+            
+        </div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="./de15.html">
+        <div class="ephoto">
+            <img src="./e15.jpg" alt="">
+            <p class="name">The Confidence Game by Maria Konnikova </p>
+            <h3 class="price"><span>&#36;</span>6 <s id="previous">&#36;9.99</s></h3>
+            
+        </div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="./de16.html">
+        <div class="ephoto">
+            <img src="./e16.jpg" alt="">
+            <p class="name">The Happiness Project by Gretchen Rubin </p>
+            <h3 class="price"><span>&#36;</span>7.50 <s id="previous">&#36;12.49</s></h3>
+            
+        </div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="./de17.html">
+        <div class="ephoto">
+            <img src="./e17.jpg" alt="">
+            <p class="name">The Laws of Human Nature by Robert Greene </p>
+            <h3 class="price"><span>&#36;</span>9 <s id="previous">&#36;14.99</s></h3>
+            
+        </div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="./de18.html">
+        <div class="ephoto">
+            <img src="./e18.jpg" alt="">
+            <p class="name">The Subtle Art of Not Giving a F*ck by Mark Manson </p>
+            <h3 class="price"><span>&#36;</span>7.80 <s id="previous">&#36;12.99</s></h3>
+            
+        </div>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="./de19.html">
+        <div class="ephoto">
+            <img src="./e19.jpg" alt="">
+            <p class="name">This Is How You Heal by Brianna Wiest </p>
+            <h3 class="price"><span>&#36;</span>6 <s id="previous">&#36;9.99</s></h3>
+            
+        </div>
+        </a>
+      </li>
+
+
+
+      <li>
+        <a href="./de20.html">
+        <div class="ephoto">
+            <img src="./e20.jpg" alt="">
+            <p class="name">You are a Badass by Jen Sincero </p>
+            <h3 class="price"><span>&#36;</span>6 <s id="previous">&#36;9.99</s></h3>
+            
+        </div>
+        </a>
+      </li>
+
+
+   <!-- 21-30 -->
+  
+   <li>
+    <a href="./de21.html">
+    <div class="ephoto">
+        <img src="./e21.jpg" alt="">
+        <p class="name">Before You Quit Your Job by Robert Kiyosaki</p>
+        <h3 class="price"><span>&#36;</span>7.67 <s id="previous">&#36;12.78</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="./de22.html">
+    <div class="ephoto">
+        <img src="./e22.jpg" alt="">
+        <p class="name">Braving the Wilderness by Brene Brown </p>
+        <h3 class="price"><span>&#36;</span>9 <s id="previous">&#36;14.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+  <li>
+    <a href="./de23.html">
+    <div class="ephoto">
+        <img src="./e23.jpg" alt="">
+        <p class="name">Dare To Lead by Brene Brown </p>
+        <h3 class="price"><span>&#36;</span>8.40 <s id="previous">&#36;13.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de24.html">
+    <div class="ephoto">
+        <img src="./e24.jpg" alt="">
+        <p class="name">Daring Greatly by Brene Brown </p>
+        <h3 class="price"><span>&#36;</span>9 <s id="previous">&#36;14.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de25.html">
+    <div class="ephoto">
+        <img src="./e25.jpg" alt="">
+        <p class="name">Guide to Becoming Rich Without Cutting Up Your Credit Card  by Robert Kiyosaki</p>
+        <h3 class="price"><span>&#36;</span>5.28 <s id="previous">&#36;8.79</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de26.html">
+    <div class="ephoto">
+        <img src="./e26.jpg" alt="">
+        <p class="name">Midas Touch by Donald J. Trump and Robert T. Kiyosaki </p>
+        <h3 class="price"><span>&#36;</span>3.98 <s id="previous">&#36;6.62</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de27.html">
+    <div class="ephoto">
+        <img src="./e27.jpg" alt="">
+        <p class="name">No Longer Human by Dazai Osamu </p>
+        <h3 class="price"><span>&#36;</span>6 <s id="previous">&#36;9.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de28.html">
+    <div class="ephoto">
+        <img src="./e28.jpg" alt="">
+        <p class="name">Rich Dad's Cashflow Quadrant by Robert T. Kiyosaki </p>
+        <h3 class="price"><span>&#36;</span>6.83 <s id="previous">&#36;11.38</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de29.html">
+    <div class="ephoto">
+        <img src="./e29.jpg" alt="">
+        <p class="name">Rich Dad's Conspiracy of The Rich by Robert Kiyosaki </p>
+        <h3 class="price"><span>&#36;</span>7.95 <s id="previous">&#36;13.25</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de30.html">
+    <div class="ephoto">
+        <img src="./e30.jpg" alt="">
+        <p class="name">Rich Dad's Increase Your Financial IQ by Robert T. Kiyosaki </p>
+        <h3 class="price"><span>&#36;</span>7.73 <s id="previous">&#36;12.88</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <!-- 31-40 -->
+
+  <li>
+    <a href="./de31.html">
+    <div class="ephoto">
+        <img src="./e31.jpg" alt="">
+        <p class="name">Second Chance by Robert Kiyosaki </p>
+        <h3 class="price"><span>&#36;</span>6.68 <s id="previous">&#36;11.12</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de32.html">
+    <div class="ephoto">
+        <img src="./e32.jpg" alt="">
+        <p class="name">The First 20 Hours by Josh Kaufman </p>
+        <h3 class="price"><span>&#36;</span>6 <s id="previous">&#36;9.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de33.html">
+    <div class="ephoto">
+        <img src="./e33.jpg" alt="">
+        <p class="name">The Gifts of Imperfection by Brene Brown </p>
+        <h3 class="price"><span>&#36;</span>1.20 <s id="previous">&#36;1.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de34.html">
+    <div class="ephoto">
+        <img src="./e34.jpg" alt="">
+        <p class="name">The Power of Now by Eckhart Tolle </p>
+        <h3 class="price"><span>&#36;</span>5 <s id="previous">&#36;8.45</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de35.html">
+    <div class="ephoto">
+        <img src="./e35.jpg" alt="">
+        <p class="name">Unfair Advantage  by Robert Kiyosaki </p>
+        <h3 class="price"><span>&#36;</span>5.36 <s id="previous">&#36;8.92</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de36.html">
+    <div class="ephoto">
+        <img src="./e36.jpg" alt="">
+        <p class="name">Unlimited Power by Anthony Robbins </p>
+        <h3 class="price"><span>&#36;</span>9 <s id="previous">&#36;14.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de37.html">
+    <div class="ephoto">
+        <img src="./e37.jpg" alt="">
+        <p class="name">Unshakeable by Anthony Robbins </p>
+        <h3 class="price"><span>&#36;</span>9 <s id="previous">&#36;14.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de38.html">
+    <div class="ephoto">
+        <img src="./e38.jpg" alt="">
+        <p class="name">What Happened to You by Oprah Winfrey </p>
+        <h3 class="price"><span>&#36;</span>9 <s id="previous">&#36;14.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de39.html">
+    <div class="ephoto">
+        <img src="./e39.jpg" alt="">
+        <p class="name">When Panic Attacks by David D. Burns, M.D. </p>
+        <h3 class="price"><span>&#36;</span>8.40 <s id="previous">&#36;13.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+
+  <li>
+    <a href="./de40.html">
+    <div class="ephoto">
+        <img src="./e40.jpg" alt="">
+        <p class="name">Yeah, No. Not Happening by Karen Karbo </p>
+        <h3 class="price"><span>&#36;</span>1.80 <s id="previous">&#36;2.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+<!-- 41-50 -->
+
+<li>
+  <a href="./de41.html">
+  <div class="ephoto">
+      <img src="./e41.jpg" alt="">
+      <p class="name">Atomic Habits by James Clear </p>
+      <h3 class="price"><span>&#36;</span>7.80 <s id="previous">&#36;12.99</s></h3>
+      
+  </div>
+  </a>
+</li>
+
+
+<li>
+  <a href="./de42.html">
+  <div class="ephoto">
+      <img src="./e42.jpg" alt="">
+      <p class="name">Becoming Bulletproof by Evy Poumpouras </p>
+      <h3 class="price"><span>&#36;</span>8.40 <s id="previous">&#36;13.99</s></h3>
+      
+  </div>
+  </a>
+</li>
+
+
+<li>
+  <a href="./de43.html">
+  <div class="ephoto">
+      <img src="./e43.jpg" alt="">
+      <p class="name">Breaking the Habit of Being Yourself by Joe Dispenza </p>
+      <h3 class="price"><span>&#36;</span>6.60 <s id="previous">&#36;10.99</s></h3>
+      
+  </div>
+  </a>
+</li>
+
+
+<li>
+  <a href="./de44.html">
+  <div class="ephoto">
+      <img src="./e44.jpg" alt="">
+      <p class="name">Crucial Conversations by Kerry Patterson </p>
+      <h3 class="price"><span>&#36;</span>5.42 <s id="previous">&#36;9.02</s></h3>
+      
+  </div>
+  </a>
+</li>
+
+
+<li>
+  <a href="./de45.html">
+  <div class="ephoto">
+      <img src="./e45.jpg" alt="">
+      <p class="name">Factfulness by Hans Rosling  </p>
+      <h3 class="price"><span>&#36;</span>7.80 <s id="previous">&#36;12.99</s></h3>
+      
+  </div>
+  </a>
+</li>
+
+
+<li>
+  <a href="./de46.html">
+  <div class="ephoto">
+      <img src="./e46.jpg" alt="">
+      <p class="name">Find Your Why by Simon Sinek </p>
+      <h3 class="price"><span>&#36;</span>8.40 <s id="previous">&#36;13.99</s></h3>
+      
+  </div>
+  </a>
+</li>
+
+
+<li>
+  <a href="./de47.html">
+  <div class="ephoto">
+      <img src="./e47.jpg" alt="">
+      <p class="name">How Rich People Think by Steve Siebold </p>
+      <h3 class="price"><span>&#36;</span>6 <s id="previous">&#36;9.99</s></h3>
+      
+  </div>
+  </a>
+</li>
+
+
+<li>
+  <a href="./de48.html">
+  <div class="ephoto">
+      <img src="./e48.jpg" alt="">
+      <p class="name">How to Create Chemistry with Anyone  by Leil Lowndes </p>
+      <h3 class="price"><span>&#36;</span>6 <s id="previous">&#36;9.99</s></h3>
+      
+  </div>
+  </a>
+</li>
+
+
+<li>
+  <a href="./de49.html">
+  <div class="ephoto">
+      <img src="./e49.jpg" alt="">
+      <p class="name">How to Make Anyone Fall in Love With You by Leil Lowndes </p>
+      <h3 class="price"><span>&#36;</span>8.93 <s id="previous">&#36;14.87</s></h3>
+      
+  </div>
+  </a>
+</li>
+
+
+
+<li>
+  <a href="./de50.html">
+  <div class="ephoto">
+      <img src="./e50.jpg" alt="">
+      <p class="name">How to Make Anyone Like You by Leil Lowndes  </p>
+      <h3 class="price"><span>&#36;</span>6 <s id="previous">&#36;10.00</s></h3>
+      
+  </div>
+  </a>
+</li>
+
+
+  <!-- 51-60 -->
+
+  <li>
+    <a href="./de51.html">
+    <div class="ephoto">
+        <img src="./e51.jpg" alt="">
+        <p class="name">How to Talk to Anyone by Leil Lowndes </p>
+        <h3 class="price"><span>&#36;</span>5.40 <s id="previous">&#36;9.00</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de52.html">
+    <div class="ephoto">
+        <img src="./e52.jpg" alt="">
+        <p class="name">Just Listen by Mark Goulston </p>
+        <h3 class="price"><span>&#36;</span>8.40 <s id="previous">&#36;13.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de53.html">
+    <div class="ephoto">
+        <img src="./e53.jpg" alt="">
+        <p class="name">Leaders Eat Last by Simon Sinek </p>
+        <h3 class="price"><span>&#36;</span>3 <s id="previous">&#36;4.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de54.html">
+    <div class="ephoto">
+        <img src="./e54.jpg" alt="">
+        <p class="name">Stress Proof by Mithu Storoni </p>
+        <h3 class="price"><span>&#36;</span>4.80 <s id="previous">&#36;7.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de55.html">
+    <div class="ephoto">
+        <img src="./e55.jpg" alt="">
+        <p class="name">The Confidence Code by Katty Kay Claire Shipman </p>
+        <h3 class="price"><span>&#36;</span>9.60 <s id="previous">&#36;15.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de56.html">
+    <div class="ephoto">
+        <img src="./e56.jpg" alt="">
+        <p class="name">The Healthy Habit Revolution by Derek Doepker </p>
+        <h3 class="price"><span>&#36;</span>3 <s id="previous">&#36;4.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de57.html">
+    <div class="ephoto">
+        <img src="./e57.jpg" alt="">
+        <p class="name">The Infinite Game by Simon Sinek </p>
+        <h3 class="price"><span>&#36;</span>10.20 <s id="previous">&#36;16.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de58.html">
+    <div class="ephoto">
+        <img src="./e58.jpg" alt="">
+        <p class="name">The Seasons of Life by Jim Rohn </p>
+        <h3 class="price"><span>&#36;</span>4.80 <s id="previous">&#36;7.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de59.html">
+    <div class="ephoto">
+        <img src="./e59.jpg" alt="">
+        <p class="name">The Willpower Instinct by Kelly McGonigal </p>
+        <h3 class="price"><span>&#36;</span>6 <s id="previous">&#36;9.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+
+  <li>
+    <a href="./de60.html">
+    <div class="ephoto">
+        <img src="./e60.jpg" alt="">
+        <p class="name">Total Money Makeover Workbook by Dave Ramsey </p>
+        <h3 class="price"><span>&#36;</span>7.80 <s id="previous">&#36;12.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+<!-- 61-70 -->
+
+<li>
+  <a href="./de61.html">
+  <div class="ephoto">
+      <img src="./e61.jpg" alt="">
+      <p class="name">7 Years with Jim Rohn by Chris Widener </p>
+      <h3 class="price"><span>&#36;</span>4.20 <s id="previous">&#36;6.99</s></h3>
+      
+  </div>
+  </a>
+</li>
+
+
+<li>
+  <a href="./de62.html">
+  <div class="ephoto">
+      <img src="./e62.jpg" alt="">
+      <p class="name">A More Beautiful Question by Warren Berger </p>
+      <h3 class="price"><span>&#36;</span>6 <s id="previous">&#36;9.99</s></h3>
+      
+  </div>
+  </a>
+</li>
+
+
+<li>
+  <a href="./de63.html">
+  <div class="ephoto">
+      <img src="./e63.jpg" alt="">
+      <p class="name">Mental Toughness by William Anderson </p>
+      <h3 class="price"><span>&#36;</span>1.80 <s id="previous">&#36;2.99</s></h3>
+      
+  </div>
+  </a>
+</li>
+
+
+<li>
+  <a href="./de64.html">
+  <div class="ephoto">
+      <img src="./e64.jpg" alt="">
+      <p class="name">MONEY Master the Game by Tony Robbins </p>
+      <h3 class="price"><span>&#36;</span>10.80 <s id="previous">&#36;17.99</s></h3>
+      
+  </div>
+  </a>
+</li>
+
+
+<li>
+  <a href="./de65.html">
+  <div class="ephoto">
+      <img src="./e65.jpg" alt="">
+      <p class="name">More Than Enough by Dave Ramsey </p>
+      <h3 class="price"><span>&#36;</span>6 <s id="previous">&#36;9.99</s></h3>
+      
+  </div>
+  </a>
+</li>
+
+
+<li>
+  <a href="./de66.html">
+  <div class="ephoto">
+      <img src="./e66.jpg" alt="">
+      <p class="name">My Philosophy for Successful Living by Jim Rohn </p>
+      <h3 class="price"><span>&#36;</span>2.40 <s id="previous">&#36;3.99</s></h3>
+      
+  </div>
+  </a>
+</li>
+
+
+<li>
+  <a href="./de67.html">
+  <div class="ephoto">
+      <img src="./e67.jpg" alt="">
+      <p class="name">One Person, No Vote by Carol Anderson </p>
+      <h3 class="price"><span>&#36;</span>6 <s id="previous">&#36;9.99</s></h3>
+      
+  </div>
+  </a>
+</li>
+
+
+<li>
+  <a href="./de68.html">
+  <div class="ephoto">
+      <img src="./e68.jpg" alt="">
+      <p class="name">Persuasion: Dark Psychology by Robert Moore  </p>
+      <h3 class="price"><span>&#36;</span>3 <s id="previous">&#36;4.99</s></h3>
+      
+  </div>
+  </a>
+</li>
+
+
+<li>
+  <a href="./de69.html">
+  <div class="ephoto">
+      <img src="./e69.jpg" alt="">
+      <p class="name">Predictable Results in Unpredictable Times by Stephen R. Covey </p>
+      <h3 class="price"><span>&#36;</span>3.60 <s id="previous">&#36;5.99</s></h3>
+      
+  </div>
+  </a>
+</li>
+
+
+
+<li>
+  <a href="./de70.html">
+  <div class="ephoto">
+      <img src="./e70.jpg" alt="">
+      <p class="name">Primary Greatness by Stephen R. Covey   </p>
+      <h3 class="price"><span>&#36;</span>8.40 <s id="previous">&#36;13.99</s></h3>
+      
+  </div>
+  </a>
+</li>
+
+
+  <!-- 71-80 -->
+
+  <li>
+    <a href="./de71.html">
+    <div class="ephoto">
+        <img src="./e71.jpg" alt="">
+        <p class="name">Start with Why by Simon Sinek </p>
+        <h3 class="price"><span>&#36;</span>7.80 <s id="previous">&#36;12.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de72.html">
+    <div class="ephoto">
+        <img src="./e72.jpg" alt="">
+        <p class="name">Stop Self-Sabotage by Judy Ho </p>
+        <h3 class="price"><span>&#36;</span>1.20 <s id="previous">&#36;1.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de73.html">
+    <div class="ephoto">
+        <img src="./e73.jpg" alt="">
+        <p class="name">TED Talks The Official TED Guide to Public Speaking by Chris Anderson</p>
+        <h3 class="price"><span>&#36;</span>9.60 <s id="previous">&#36;15.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de74.html">
+    <div class="ephoto">
+        <img src="./e74.jpg" alt="">
+        <p class="name">The 5 AM Club by Robin Sharma </p>
+        <h3 class="price"><span>&#36;</span>7.20 <s id="previous">&#36;11.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de75.html">
+    <div class="ephoto">
+        <img src="./e75.jpg" alt="">
+        <p class="name">The Power of I AM by Joel Osteen </p>
+        <h3 class="price"><span>&#36;</span>6 <s id="previous">&#36;9.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de76.html">
+    <div class="ephoto">
+        <img src="./e76.jpg" alt="">
+        <p class="name">The SPEED of Trust  by Stephen R. Covey with R. Merrill  </p>
+        <h3 class="price"><span>&#36;</span>9.60 <s id="previous">&#36;15.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de77.html">
+    <div class="ephoto">
+        <img src="./e77.jpg" alt="">
+        <p class="name">Think And Grow Rich by Napoleon Hill </p>
+        <h3 class="price"><span>&#36;</span>6 <s id="previous">&#36;9.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de78.html">
+    <div class="ephoto">
+        <img src="./e78.jpg" alt="">
+        <p class="name">Tribes We Need You to Lead Us by Seth Godin </p>
+        <h3 class="price"><span>&#36;</span>4.80 <s id="previous">&#36;7.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de79.html">
+    <div class="ephoto">
+        <img src="./e79.jpg" alt="">
+        <p class="name">Way of the Turtle by Curtis M. Faith </p>
+        <h3 class="price"><span>&#36;</span>9.92 <s id="previous">&#36;16.52</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+
+  <li>
+    <a href="./de80.html">
+    <div class="ephoto">
+        <img src="./e80.jpg" alt="">
+        <p class="name">You Need a Budget by Jesse Mecham </p>
+        <h3 class="price"><span>&#36;</span>11.40 <s id="previous">&#36;18.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+    <!-- 81-90 -->
+
+   
+  
+  
+    <li>
+      <a href="./de82.html">
+      <div class="ephoto">
+          <img src="./e82.jpg" alt="">
+          <p class="name">12 Rules for Life by Jordan Peterson </p>
+          <h3 class="price"><span>&#36;</span>10.20 <s id="previous">&#36;16.99</s></h3>
+          
+      </div>
+      </a>
+    </li>
+  
+  
+    <li>
+      <a href="./de83.html">
+      <div class="ephoto">
+          <img src="./e83.jpg" alt="">
+          <p class="name">13 Things Mentally Strong People Don't Do by Amy Morin</p>
+          <h3 class="price"><span>&#36;</span>8.40 <s id="previous">&#36;13.99</s></h3>
+          
+      </div>
+      </a>
+    </li>
+  
+  
+    <li>
+      <a href="./de84.html">
+      <div class="ephoto">
+          <img src="./e84.jpg" alt="">
+          <p class="name">100 Ways to Motivate Others by Steve Chandler </p>
+          <h3 class="price"><span>&#36;</span>7.20 <s id="previous">&#36;11.99</s></h3>
+          
+      </div>
+      </a>
+    </li>
+  
+  
+    <li>
+      <a href="./de85.html">
+      <div class="ephoto">
+          <img src="./e85.jpg" alt="">
+          <p class="name">100 Ways to Motivate Yourself by Steve Chandler </p>
+          <h3 class="price"><span>&#36;</span>7.20 <s id="previous">&#36;11.99</s></h3>
+          
+      </div>
+      </a>
+    </li>
+  
+  
+    <li>
+      <a href="./de86.html">
+      <div class="ephoto">
+          <img src="./e86.jpg" alt="">
+          <p class="name">Becoming Supernatural by Dr. Joe Dispenza  </p>
+          <h3 class="price"><span>&#36;</span>6.60 <s id="previous">&#36;10.99</s></h3>
+          
+      </div>
+      </a>
+    </li>
+  
+  
+  
+  
+  
+    <li>
+      <a href="./de88.html">
+      <div class="ephoto">
+          <img src="./e88.jpg" alt="">
+          <p class="name">Everything is F*cked by Mark Manson </p>
+          <h3 class="price"><span>&#36;</span>7.80 <s id="previous">&#36;12.99</s></h3>
+          
+      </div>
+      </a>
+    </li>
+  
+  
+    <li>
+      <a href="./de89.html">
+      <div class="ephoto">
+          <img src="./e89.jpg" alt="">
+          <p class="name">Get Your Shit Together by Sarah Knight </p>
+          <h3 class="price"><span>&#36;</span>7.20 <s id="previous">&#36;11.99</s></h3>
+          
+      </div>
+      </a>
+    </li>
+  
+  
+  
+    <li>
+      <a href="./de90.html">
+      <div class="ephoto">
+          <img src="./e90.jpg" alt="">
+          <p class="name">Grit by Angela Duckworth </p>
+          <h3 class="price"><span>&#36;</span>9 <s id="previous">&#36;14.99</s></h3>
+          
+      </div>
+      </a>
+    </li>
+
+
+
+  <!-- 91-100 -->
+
+
+
+
+  <li>
+    <a href="./de93.html">
+    <div class="ephoto">
+        <img src="./e93.jpg" alt="">
+        <p class="name">How to Win Friends and Influence People in the Digital Age by Dale Carnegie</p>
+        <h3 class="price"><span>&#36;</span>8.40 <s id="previous">&#36;13.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de94.html">
+    <div class="ephoto">
+        <img src="./e94.jpg" alt="">
+        <p class="name">In Search of Lost Time by Marcel Proust </p>
+        <h3 class="price"><span>&#36;</span>30 <s id="previous">&#36;49.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de95.html">
+    <div class="ephoto">
+        <img src="./e95.jpg" alt="">
+        <p class="name">Lust, Anger, Love by Maureen Canning </p>
+        <h3 class="price"><span>&#36;</span>10.20 <s id="previous">&#36;16.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de96.html">
+    <div class="ephoto">
+        <img src="./e96.jpg" alt="">
+        <p class="name">The 8th Habit by Stephen R. Covey  </p>
+        <h3 class="price"><span>&#36;</span>9 <s id="previous">&#36;14.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de97.html">
+    <div class="ephoto">
+        <img src="./e97.jpg" alt="">
+        <p class="name">The Emotional Wound Thesaurus by Angela Ackerman, Becca Puglisi </p>
+        <h3 class="price"><span>&#36;</span>4.20 <s id="previous">&#36;6.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+ 
+  <li>
+    <a href="./de99.html">
+    <div class="ephoto">
+        <img src="./e99.jpg" alt="">
+        <p class="name">Untamed by Glennon Doyle </p>
+        <h3 class="price"><span>&#36;</span>7.80 <s id="previous">&#36;12.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+
+  <li>
+    <a href="./de100.html">
+    <div class="ephoto">
+        <img src="./e100.jpg" alt="">
+        <p class="name">Warren Buffett's Ground Rules by Jeremy C. Miller </p>
+        <h3 class="price"><span>&#36;</span>8.84 <s id="previous">&#36;14.72</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+
+  <!-- 101-110 -->
+
+  <li>
+    <a href="./de101.html">
+    <div class="ephoto">
+        <img src="./e101.jpg" alt="">
+        <p class="name">Emotional Intelligence by Daniel Goleman </p>
+        <h3 class="price"><span>&#36;</span>7.80 <s id="previous">&#36;12.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de102.html">
+    <div class="ephoto">
+        <img src="./e102.jpg" alt="">
+        <p class="name">F*ck No by Sarah Knight </p>
+        <h3 class="price"><span>&#36;</span>7.80 <s id="previous">&#36;12.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de103.html">
+    <div class="ephoto">
+        <img src="./e103.jpg" alt="">
+        <p class="name">Girl, Stop Apologizing by Rachel Hollis</p>
+        <h3 class="price"><span>&#36;</span>9 <s id="previous">&#36;14.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de104.html">
+    <div class="ephoto">
+        <img src="./e104.jpg" alt="">
+        <p class="name">I Could Do Anything If I Only Knew What It Was by Barbara Sher, Barbara Smith </p>
+        <h3 class="price"><span>&#36;</span>4.20 <s id="previous">&#36;6.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de105.html">
+    <div class="ephoto">
+        <img src="./e105.jpg" alt="">
+        <p class="name">Love for Imperfect Things by Haemin Sunim </p>
+        <h3 class="price"><span>&#36;</span>5.40 <s id="previous">&#36;8.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de106.html">
+    <div class="ephoto">
+        <img src="./e106.jpg" alt="">
+        <p class="name">Men are From Mars, Women are From Venus by John Gray </p>
+        <h3 class="price"><span>&#36;</span>7.20 <s id="previous">&#36;11.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de107.html">
+    <div class="ephoto">
+        <img src="./e107.jpg" alt="">
+        <p class="name">Mindset by Carol Dweck </p>
+        <h3 class="price"><span>&#36;</span>8.40 <s id="previous">&#36;13.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de108.html">
+    <div class="ephoto">
+        <img src="./e108.jpg" alt="">
+        <p class="name">No Limits  by John C. Maxwell </p>
+        <h3 class="price"><span>&#36;</span>8.40 <s id="previous">&#36;13.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+  <li>
+    <a href="./de109.html">
+    <div class="ephoto">
+        <img src="./e109.jpg" alt="">
+        <p class="name">Resilience by Josh Floyd</p>
+        <h3 class="price"><span>&#36;</span>3.52 <s id="previous">&#36;5.86</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+
+  <li>
+    <a href="./de110.html">
+    <div class="ephoto">
+        <img src="./e110.jpg" alt="">
+        <p class="name">Screw Everyone, Sleeping My Way into Monogamy by Ophira Eisenberg </p>
+        <h3 class="price"><span>&#36;</span>6 <s id="previous">&#36;9.99</s></h3>
+        
+    </div>
+    </a>
+  </li>
+
+
+    <!-- 111-120 -->
+
+    <li>
+      <a href="./de111.html">
+      <div class="ephoto">
+          <img src="./e111.jpg" alt="">
+          <p class="name">The 80/20 Principle by Richard Koch </p>
+          <h3 class="price"><span>&#36;</span>9 <s id="previous">&#36;14.99</s></h3>
+          
+      </div>
+      </a>
+    </li>
+  
+  
+    <li>
+      <a href="./de112.html">
+      <div class="ephoto">
+          <img src="./e112.jpg" alt="">
+          <p class="name">The Algebra of Happiness by Scott Galloway </p>
+          <h3 class="price"><span>&#36;</span>4.80 <s id="previous">&#36;7.99</s></h3>
+          
+      </div>
+      </a>
+    </li>
+  
+  
+    <li>
+      <a href="./de113.html">
+      <div class="ephoto">
+          <img src="./e113.jpg" alt="">
+          <p class="name">The Daily Stoic by Ryan Holiday, Stephen Hanselman</p>
+          <h3 class="price"><span>&#36;</span>10.20 <s id="previous">&#36;16.99</s></h3>
+          
+      </div>
+      </a>
+    </li>
+  
+  
+    <li>
+      <a href="./de114.html">
+      <div class="ephoto">
+          <img src="./e114.jpg" alt="">
+          <p class="name">The Life Changing Magic of Tidying Up by Marie Kondo</p>
+          <h3 class="price"><span>&#36;</span>6 <s id="previous">&#36;9.99</s></h3>
+          
+      </div>
+      </a>
+    </li>
+  
+  
+    <li>
+      <a href="./de115.html">
+      <div class="ephoto">
+          <img src="./e115.jpg" alt="">
+          <p class="name">The Power of Habit by Charles Duhigg </p>
+          <h3 class="price"><span>&#36;</span>7.80 <s id="previous">&#36;12.99</s></h3>
+          
+      </div>
+      </a>
+    </li>
+  
+  
+    <li>
+      <a href="./de116.html">
+      <div class="ephoto">
+          <img src="./e116.jpg" alt="">
+          <p class="name">The Power of Your Potential by John C. Maxwell </p>
+          <h3 class="price"><span>&#36;</span>1.80 <s id="previous">&#36;2.99</s></h3>
+          
+      </div>
+      </a>
+    </li>
+  
+  
+    <li>
+      <a href="./de117.html">
+      <div class="ephoto">
+          <img src="./e117.jpg" alt="">
+          <p class="name">The Single Woman by Mandy Hale </p>
+          <h3 class="price"><span>&#36;</span>5.40 <s id="previous">&#36;8.99</s></h3>
+          
+      </div>
+      </a>
+    </li>
+  
+  
+    <li>
+      <a href="./de118.html">
+      <div class="ephoto">
+          <img src="./e118.jpg" alt="">
+          <p class="name">The Single Woman's Sassy Survival Guide by Mandy Hale </p>
+          <h3 class="price"><span>&#36;</span>1.80 <s id="previous">&#36;2.99</s></h3>
+          
+      </div>
+      </a>
+    </li>
+  
+  
+    <li>
+      <a href="./de119.html">
+      <div class="ephoto">
+          <img src="./e119.jpg" alt="">
+          <p class="name">What Extraordinary People Know by Anthony Moore</p>
+          <h3 class="price"><span>&#36;</span>2.30 <s id="previous">&#36;3.82</s></h3>
+          
+      </div>
+      </a>
+    </li>
+  
+  
+  
+    <li>
+      <a href="./de120.html">
+      <div class="ephoto">
+          <img src="./e120.jpg" alt="">
+          <p class="name">You Are Enough by Mandy Hale </p>
+          <h3 class="price"><span>&#36;</span>6 <s id="previous">&#36;9.99</s></h3>
+          
+      </div>
+      </a>
+    </li>
+  
+  
+      <!-- 121-130 -->
+
+      <li>
+        <a href="./de121.html">
+        <div class="ephoto">
+            <img src="./e121.jpg" alt="">
+            <p class="name">A Year of Self Love by Troy L. Love </p>
+            <h3 class="price"><span>&#36;</span>5.90 <s id="previous">&#36;9.83</s></h3>
+            
+        </div>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="./de122.html">
+        <div class="ephoto">
+            <img src="./e122.jpg" alt="">
+            <p class="name">Approaching the Buddhist Path by Dalai Lama, Thubten Chodron </p>
+            <h3 class="price"><span>&#36;</span>10.80 <s id="previous">&#36;17.99</s></h3>
+            
+        </div>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="./de123.html">
+        <div class="ephoto">
+            <img src="./e123.jpg" alt="">
+            <p class="name">Eat That Frog by Brian Tracy</p>
+            <h3 class="price"><span>&#36;</span>7.20 <s id="previous">&#36;11.99</s></h3>
+            
+        </div>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="./de124.html">
+        <div class="ephoto">
+            <img src="./e124.jpg" alt="">
+            <p class="name">Enough Is Enough by David E Clarke, PhD </p>
+            <h3 class="price"><span>&#36;</span>5.40 <s id="previous">&#36;8.99</s></h3>
+            
+        </div>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="./de125.html">
+        <div class="ephoto">
+            <img src="./e125.jpg" alt="">
+            <p class="name">Happiness in Hard Times by Andrew Matthews </p>
+            <h3 class="price"><span>&#36;</span>6 <s id="previous">&#36;9.99</s></h3>
+            
+        </div>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="./de126.html">
+        <div class="ephoto">
+            <img src="./e126.jpg" alt="">
+            <p class="name">How Life Works by Andrew Matthews </p>
+            <h3 class="price"><span>&#36;</span>4.77 <s id="previous">&#36;7.95</s></h3>
+            
+        </div>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="./de127.html">
+        <div class="ephoto">
+            <img src="./e127.jpg" alt="">
+            <p class="name">How to Analyze People with Dark Psychology by Liam Robinson </p>
+            <h3 class="price"><span>&#36;</span>2.99 <s id="previous">&#36;4.97</s></h3>
+            
+        </div>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="./de128.html">
+        <div class="ephoto">
+            <img src="./e128.jpg" alt="">
+            <p class="name">More Than Enough by Elaine Welteroth </p>
+            <h3 class="price"><span>&#36;</span>8.40 <s id="previous">&#36;13.99</s></h3>
+            
+        </div>
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="./de129.html">
+        <div class="ephoto">
+            <img src="./e129.jpg" alt="">
+            <p class="name">Rich Dad Poor Dad by Robert T. Kiyosaki </p>
+            <h3 class="price"><span>&#36;</span>4.10 <s id="previous">&#36;6.82</s></h3>
+            
+        </div>
+        </a>
+      </li>
+    
+    
+    
+      <li>
+        <a href="./de130.html">
+        <div class="ephoto">
+            <img src="./e130.jpg" alt="">
+            <p class="name">Secret Millionaires Club by Andy & Amy Heyward </p>
+            <h3 class="price"><span>&#36;</span>9 <s id="previous">&#36;15.00</s></h3>
+            
+        </div>
+        </a>
+      </li>
+    
+    
+        <!-- 131-134 -->
+
+        <li>
+          <a href="./de131.html">
+          <div class="ephoto">
+              <img src="./e131.jpg" alt="">
+              <p class="name">The Art of Asking by Amanda Palmer </p>
+              <h3 class="price"><span>&#36;</span>7.20 <s id="previous">&#36;11.99</s></h3>
+              
+          </div>
+          </a>
+        </li>
+      
+      
+        <li>
+          <a href="./de132.html">
+          <div class="ephoto">
+              <img src="./e132.jpg" alt="">
+              <p class="name">The Magic of Thinking Big by David J. Schwartz </p>
+              <h3 class="price"><span>&#36;</span>9 <s id="previous">&#36;14.99</s></h3>
+              
+          </div>
+          </a>
+        </li>
+      
+      
+        <li>
+          <a href="./de133.html">
+          <div class="ephoto">
+              <img src="./e133.jpg" alt="">
+              <p class="name">The Nature Fix by Florence Williams </p>
+              <h3 class="price"><span>&#36;</span>5.90 <s id="previous">&#36;9.83</s></h3>
+              
+          </div>
+          </a>
+        </li>
+      
+      
+      
+        <li>
+          <a href="./de134.html">
+          <div class="ephoto">
+              <img src="./e134.jpg" alt="">
+              <p class="name">The Secret Codes by Alaa Alsadi </p>
+              <h3 class="price"><span>&#36;</span>1.80 <s id="previous">&#36;2.99</s></h3>
+              
+          </div>
+          </a>
+        </li>
+
+
+
+
+      <!-- End -->
+
+     
+
+
+
+</div>
+</div>
+
+
+
+
+<script>
+
+hamburger = document.querySelector(".hamburger");
+  hamburger.onclick = function() {
+      topNav = document.querySelector(".topnav2");
+      topNav.classList.toggle("active");
+  }
+
+
+      function myFunction() {
+        var x = document.getElementById("myTopnav2");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+
+
+
+
+    function myFunction() {
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById("mySearch");
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myMenu");
+      li = ul.getElementsByTagName("li");
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+    </script>
+
+</body>
+</html>
